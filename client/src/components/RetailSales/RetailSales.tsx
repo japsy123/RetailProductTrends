@@ -1,4 +1,4 @@
-function RetailSales() {
+function RetailSales(): JSX.Element {
     return <div>Retail Sales</div>
 }
 
