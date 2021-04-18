@@ -21,7 +21,8 @@ export interface IRetailDashboardStyles {
                 backgroundColor: 'rgb(0, 20, 51)',
                 width: '100%',
                 height: '50px',
-                padding: '10px'
+                padding: '10px',
+                marginBottom: '25px'
             }
         }
     }

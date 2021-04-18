@@ -17,7 +17,7 @@ function RetailSales(): JSX.Element {
     <Stack styles={styles.salesContainer}>
         <Text styles={styles.header}>Retail Sales</Text>
          <LineChart
-    width={1700}
+    width={1600}
     height={500}
     data={retailSales}
     margin={{
@@ -32,7 +32,7 @@ function RetailSales(): JSX.Element {
  style={{
     fill: "#BCBCBC",
                     fontSize: "16px",
-                    fontFamily: "Montserrat",
+                    fontFamily: "Segoe UI",
                     fontWeight: 600,
                     lineHeight: "18px"
 

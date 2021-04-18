@@ -21,7 +21,8 @@ export interface IRetailSalesStyles {
             root: {
                 fontSize: '20px',
                 padding: '15px',
-                marginBottom: '30px'
+                marginBottom: '30px',
+                fontWeight: '400'
             }
         }
     }
