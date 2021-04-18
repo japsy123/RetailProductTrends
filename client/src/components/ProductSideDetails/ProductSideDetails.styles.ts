@@ -9,8 +9,8 @@ export interface IProductSideDetails {
     return {
         sidePanel: {
            root: {
-               width: "20%",
-               height: "70vh",
+               width: "260px",
+               height: "80vh",
                margin: '15px',
                border: '1px solid white',
                backgroundColor: 'white',

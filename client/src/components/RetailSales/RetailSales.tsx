@@ -1,305 +1,25 @@
-import { Stack, Text } from "@fluentui/react";
+import { format, Stack, Text } from "@fluentui/react";
 import { Line, LineChart, XAxis, YAxis } from "recharts"
 import { retailSalesStyles } from "./RetailSales.styles"
-const data = [
-    {
-      name: "Page A",
-      uv: 4000,
-      pv: 2400,
-      amt: 2400
-    },
-    {
-      name: "Page B",
-      uv: 3000,
-      pv: 1398,
-      amt: 2210
-    },
-    {
-      name: "Page C",
-      uv: 2000,
-      pv: 9800,
-      amt: 2290
-    },
-    {
-      name: "Page D",
-      uv: 2780,
-      pv: 3908,
-      amt: 2000
-    },
-    {
-      name: "Page E",
-      uv: 1890,
-      pv: 4800,
-      amt: 2181
-    },
-    {
-      name: "Page F",
-      uv: 2390,
-      pv: 3800,
-      amt: 2500
-    },
-    {
-      name: "Page G",
-      uv: 3490,
-      pv: 4300,
-      amt: 2100
-    },
-    {
-        name: "Page A",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400
-      },
-      {
-        name: "Page B",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210
-      },
-      {
-        name: "Page C",
-        uv: 2000,
-        pv: 9800,
-        amt: 2290
-      },
-      {
-        name: "Page D",
-        uv: 2780,
-        pv: 3908,
-        amt: 2000
-      },
-      {
-        name: "Page E",
-        uv: 1890,
-        pv: 4800,
-        amt: 2181
-      },
-      {
-        name: "Page F",
-        uv: 2390,
-        pv: 3800,
-        amt: 2500
-      },
-      {
-        name: "Page G",
-        uv: 3490,
-        pv: 4300,
-        amt: 2100
-      },
-      {
-        name: "Page A",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400
-      },
-      {
-        name: "Page B",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210
-      },
-      {
-        name: "Page C",
-        uv: 2000,
-        pv: 9800,
-        amt: 2290
-      },
-      {
-        name: "Page D",
-        uv: 2780,
-        pv: 3908,
-        amt: 2000
-      },
-      {
-        name: "Page E",
-        uv: 1890,
-        pv: 4800,
-        amt: 2181
-      },
-      {
-        name: "Page F",
-        uv: 2390,
-        pv: 3800,
-        amt: 2500
-      },
-      {
-        name: "Page G",
-        uv: 3490,
-        pv: 4300,
-        amt: 2100
-      },
-      {
-        name: "Page A",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400
-      },
-      {
-        name: "Page B",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210
-      },
-      {
-        name: "Page C",
-        uv: 2000,
-        pv: 9800,
-        amt: 2290
-      },
-      {
-        name: "Page D",
-        uv: 2780,
-        pv: 3908,
-        amt: 2000
-      },
-      {
-        name: "Page E",
-        uv: 1890,
-        pv: 4800,
-        amt: 2181
-      },
-      {
-        name: "Page F",
-        uv: 2390,
-        pv: 3800,
-        amt: 2500
-      },
-      {
-        name: "Page G",
-        uv: 3490,
-        pv: 4300,
-        amt: 2100
-      },
-      {
-          name: "Page A",
-          uv: 4000,
-          pv: 2400,
-          amt: 2400
-        },
-        {
-          name: "Page B",
-          uv: 3000,
-          pv: 1398,
-          amt: 2210
-        },
-        {
-          name: "Page C",
-          uv: 2000,
-          pv: 9800,
-          amt: 2290
-        },
-        {
-          name: "Page D",
-          uv: 2780,
-          pv: 3908,
-          amt: 2000
-        },
-        {
-          name: "Page E",
-          uv: 1890,
-          pv: 4800,
-          amt: 2181
-        },
-        {
-          name: "Page F",
-          uv: 2390,
-          pv: 3800,
-          amt: 2500
-        },
-        {
-          name: "Page G",
-          uv: 3490,
-          pv: 4300,
-          amt: 2100
-        }
-        , {
-          name: "Page A",
-          uv: 4000,
-          pv: 2400,
-          amt: 2400
-        },
-        {
-          name: "Page B",
-          uv: 3000,
-          pv: 1398,
-          amt: 2210
-        },
-        {
-          name: "Page C",
-          uv: 2000,
-          pv: 9800,
-          amt: 2290
-        },
-        {
-          name: "Page D",
-          uv: 2780,
-          pv: 3908,
-          amt: 2000
-        },
-        {
-          name: "Page E",
-          uv: 1890,
-          pv: 4800,
-          amt: 2181
-        },
-        {
-          name: "Page F",
-          uv: 2390,
-          pv: 3800,
-          amt: 2500
-        },
-        {
-          name: "Page G",
-          uv: 3490,
-          pv: 4300,
-          amt: 2100
-        },
-        {
-            name: "Page B",
-            uv: 3000,
-            pv: 1398,
-            amt: 2210
-          },
-          {
-            name: "Page C",
-            uv: 2000,
-            pv: 9800,
-            amt: 2290
-          },
-          {
-            name: "Page D",
-            uv: 2780,
-            pv: 3908,
-            amt: 2000
-          },
-          {
-            name: "Page E",
-            uv: 1890,
-            pv: 4800,
-            amt: 2181
-          },
-          {
-            name: "Page F",
-            uv: 2390,
-            pv: 3800,
-            amt: 2500
-          },
-          {
-            name: "Page G",
-            uv: 3490,
-            pv: 4300,
-            amt: 2100
-          }
-  ];
+import {IProductState} from '../../store/reducers'
+import { useSelector } from "react-redux";
+import { parseISO } from "date-fns";
 
 function RetailSales(): JSX.Element {
+    const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+  "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+];
+
     const styles = retailSalesStyles()
-    return <Stack styles={styles.salesContainer}>
-        <Text>Retail Sales</Text>
+    const retailSales = useSelector((state:IProductState) => state.productInfo[0].sales);
+    console.log(retailSales)
+    return retailSales.length ?
+    <Stack styles={styles.salesContainer}>
+        <Text styles={styles.header}>Retail Sales</Text>
          <LineChart
-    width={900}
+    width={1700}
     height={500}
-    data={data}
+    data={retailSales}
     margin={{
       top: 5,
       right: 30,
@@ -307,17 +27,36 @@ function RetailSales(): JSX.Element {
       bottom: 5
     }}
   >
-    <XAxis dataKey="name" interval={3} tickCount={12}/>
-    <YAxis hide={true} />
+    <XAxis
+ tickCount={10} tickLine={false} dataKey="weekEnding"
+ style={{
+    fill: "#BCBCBC",
+                    fontSize: "16px",
+                    fontFamily: "Montserrat",
+                    fontWeight: 600,
+                    lineHeight: "18px"
+
+}}
+tickFormatter={str => {
+        const date = parseISO(str)
+        if(date.getDate() <=7) {
+            console.log(date.getMonth())
+
+            const month = date.getMonth()
+            return monthNames[month]
+        }
+        return ''
+    }}/>
    <Line
       type="monotone"
-      dataKey="pv"
-      stroke="#8884d8"
+      strokeWidth={5}
+      dataKey="retailerMargin"
+      stroke="blue"
       dot={false}
     />
-    <Line type="monotone" dataKey="uv" stroke="#82ca9d" dot={false}/>
+    <Line strokeWidth={5} type="monotone" dataKey="retailSales" stroke="grey" dot={false}/>
     </LineChart>
-    </Stack>
+    </Stack> : <></>
 }
 
 export default RetailSales

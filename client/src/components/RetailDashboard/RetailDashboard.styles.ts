@@ -18,7 +18,7 @@ export interface IRetailDashboardStyles {
         },
         navbar: {
             root: {
-                backgroundColor: 'blue',
+                backgroundColor: 'rgb(0, 20, 51)',
                 width: '100%',
                 height: '50px',
                 padding: '10px'

@@ -1,8 +1,7 @@
 import ProductSideDetails from "../ProductSideDetails/ProductSideDetails";
-import RetailDetailsList from "../RetailDetailsList/RetailDetailsList";
 import RetailSales from "../RetailSales/RetailSales";
 import React, {useEffect} from 'react'
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import { LOAD_PRODUCT_DETAILS } from "../../store/actions";
 import { Stack } from "@fluentui/react";
 import { dashboardStyles } from "./RetailDashboard.styles";
@@ -33,8 +32,7 @@ function RetailDashboard(): JSX.Element {
         <Stack horizontal>
            <ProductSideDetails/>
            <Stack>
-            <RetailSales/>
-            <RetailDetailsList/>
+               <RetailSales/>
             </Stack>
         </Stack>
     </Stack>
