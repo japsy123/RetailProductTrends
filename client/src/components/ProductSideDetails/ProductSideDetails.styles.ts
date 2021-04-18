@@ -4,7 +4,7 @@ export interface IProductSideDetails {
     sidePanel: IStackStyles;
     tagsContainer: IStackStyles;
     info: IStackStyles;
-    subInfo: ITextStyles;
+    subInfo: IStackStyles;
 }
 
  export const productSideStyles = (): IProductSideDetails  => {
@@ -46,9 +46,10 @@ export interface IProductSideDetails {
             root: {
                 padding: '5px',
                 textAlign: 'center',
-                display: 'flex',
                 color: '#bebbb8',
-                fontWeight: 600
+                fontWeight: 600,
+                width: '200px',
+                fontSize: '12px'
             }
         }
     }

@@ -33,8 +33,10 @@ function RetailSales(): JSX.Element {
     fill: "#BCBCBC",
                     fontSize: "16px",
                     fontFamily: "Segoe UI",
-                    fontWeight: 600,
-                    lineHeight: "18px"
+                    fontWeight: 400,
+                    lineHeight: "18px",
+                    stroke: '#BCBCBC',
+                    strokeWidth: .5
 
 }}
 tickFormatter={str => {
@@ -51,10 +53,10 @@ tickFormatter={str => {
       type="monotone"
       strokeWidth={5}
       dataKey="retailerMargin"
-      stroke="blue"
+      stroke="#0078d4"
       dot={false}
     />
-    <Line strokeWidth={5} type="monotone" dataKey="retailSales" stroke="grey" dot={false}/>
+    <Line strokeWidth={5} type="monotone" dataKey="retailSales" stroke="#69797e" dot={false}/>
     </LineChart>
     </Stack> : <></>
 }

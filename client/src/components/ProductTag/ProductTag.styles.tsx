@@ -1,4 +1,4 @@
-import { IStackStyles, ITextStyles } from "@fluentui/react"
+import { IStackStyles } from "@fluentui/react"
 
 export interface IProductTagStyles {
     tag: IStackStyles;
