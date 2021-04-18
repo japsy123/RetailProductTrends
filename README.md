@@ -20,4 +20,4 @@
 
 ## Usage
 
-Go to localhost at port 3001 and see the app in action
+Go to localhost at port 3000 and see the app in action
