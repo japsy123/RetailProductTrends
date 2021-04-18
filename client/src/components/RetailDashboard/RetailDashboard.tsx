@@ -20,13 +20,15 @@ export interface IRootState {
 function RetailDashboard(): JSX.Element {
     const dispatch = useDispatch()
     const styles = dashboardStyles();
-    const loading = useSelector((state:IProductState) => state.loading)
+    const isLoading = useSelector((state:IProductState) => state.loading)
 
     useEffect(()=> {
         dispatch({type: LOAD_PRODUCT_DETAILS})
     },[dispatch])
 
-    return <Stack styles={styles.dashboardContainer}>
+    const renderDashboard = () => {
+        return isLoading ? <Stack styles={styles.loading}>Loading...</Stack>:
+          <Stack styles={styles.dashboardContainer}>
         <Stack styles={styles.navbar} horizontal>
             <img style={{height: '20px'}}
                 src={stackline} alt="StacklineLogo" />
@@ -38,6 +40,9 @@ function RetailDashboard(): JSX.Element {
             </Stack>
         </Stack>
     </Stack>
+    }
+
+    return renderDashboard()
 }
 
 export default RetailDashboard
