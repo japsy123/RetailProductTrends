@@ -1,4 +1,3 @@
-import React from 'react';
 import RetailDashboard from './components/RetailDashboard/RetailDashboard';
 import {createStore, applyMiddleware } from 'redux';
 import {Provider} from 'react-redux'
