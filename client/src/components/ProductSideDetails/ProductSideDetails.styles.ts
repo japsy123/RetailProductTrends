@@ -5,6 +5,7 @@ export interface IProductSideDetails {
   tagsContainer: IStackStyles;
   info: IStackStyles;
   subInfo: IStackStyles;
+  tag: IStackStyles;
 }
 
 export const productSideStyles = (): IProductSideDetails => {
@@ -52,5 +53,18 @@ export const productSideStyles = (): IProductSideDetails => {
         fontSize: "12px",
       },
     },
+    tag: {
+        root: {
+          border: "1px solid #e1dfdd",
+          borderRadius: "3px",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "10px",
+          height: "25px",
+          fontSize: "12px",
+          marginRight: "10px",
+          marginBottom: "6px",
+        },
+      },
   };
 };

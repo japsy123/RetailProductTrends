@@ -3,12 +3,22 @@ import { useSelector } from "react-redux";
 import { productSideStyles } from "./ProductSideDetails.styles";
 import { productSideDetails } from "../selectors/Product.selectors";
 import { useRef } from "react";
-import ProductTag from "../ProductTag/ProductTag";
 
 function ProductSideDetails(): JSX.Element {
   const productData = useSelector(productSideDetails);
   const styles = productSideStyles();
   const panelToken = useRef({ childrenGap: 10 } as IStackTokens);
+
+  const renderTags = (): JSX.Element => {
+      return  <Stack horizontal styles={styles.tagsContainer}>
+      {productData.tags.length &&
+        productData.tags.map((tag: string, id: number) => (
+          <Stack styles={styles.tag} key={id}>
+            {tag}{" "}
+          </Stack>
+        ))}
+    </Stack>
+  }
 
   const renderComponent = (): JSX.Element => {
     return (
@@ -21,10 +31,7 @@ function ProductSideDetails(): JSX.Element {
           <Text>{productData.title}</Text>
           <Stack styles={styles.subInfo}>{productData.subtitle}</Stack>
         </Stack>
-        <Stack horizontal styles={styles.tagsContainer}>
-          {productData.tags.length &&
-            productData.tags.map((tag: string, id: number) => <ProductTag tag={tag} id={id} />)}
-        </Stack>
+        {renderTags()}
       </Stack>
     );
   };
