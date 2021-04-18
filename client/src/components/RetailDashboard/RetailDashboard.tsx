@@ -7,14 +7,6 @@ import { Stack } from "@fluentui/react";
 import { dashboardStyles } from "./RetailDashboard.styles";
 import stackline from "../../stackline.svg";
 import { IProductState } from "../../store/reducers";
-export interface IRootState {
-  productInfo: [
-    {
-      tags: [];
-      name: "";
-    }
-  ];
-}
 
 function RetailDashboard(): JSX.Element {
   const dispatch = useDispatch();

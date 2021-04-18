@@ -22,8 +22,8 @@ function ProductSideDetails(): JSX.Element {
           <Stack styles={styles.subInfo}>{productData.subtitle}</Stack>
         </Stack>
         <Stack horizontal styles={styles.tagsContainer}>
-          {productData.tags.length > 0 &&
-            productData.tags.map((tag, id) => <ProductTag tag={tag} id={id} />)}
+          {productData.tags.length &&
+            productData.tags.map((tag: string, id: number) => <ProductTag tag={tag} id={id} />)}
         </Stack>
       </Stack>
     );

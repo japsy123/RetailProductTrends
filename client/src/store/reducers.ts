@@ -1,4 +1,4 @@
-import { SET_PRODUCT_DETAILS } from "./actions";
+import { IProductAction, SET_PRODUCT_DETAILS } from "./actions";
 
 export interface IProductInfo {
   brand: string;
@@ -29,26 +29,7 @@ export interface IProductState {
   ];
   loading: boolean;
 }
-export interface IProductAction {
-  type: string;
-  id: string;
-  payload: {
-    productInfo: [
-      {
-        brand: string;
-        details: [];
-        id: string;
-        image: string;
-        retailer: string;
-        reviews: [];
-        sales: [];
-        subtitle: string;
-        tags: [];
-        title: string;
-      }
-    ];
-  };
-}
+
 export const initialState: IProductState = {
   productInfo: [
     {
@@ -75,7 +56,7 @@ export function productsReducer(
     case SET_PRODUCT_DETAILS:
       return {
         loading: false,
-        productInfo: action.payload.productInfo,
+        productInfo: action.payload.productInfo
       };
     default:
       return state;
